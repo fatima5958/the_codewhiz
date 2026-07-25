@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code Whiz | Premium AI Automation & Web Solutions Agency</title>
+    <meta name="description" content="We build premium AI automation systems, modern websites, and intelligent digital solutions to help businesses save time, reduce manual work, and grow faster.">
+    <!-- Google Fonts: Outfit (headings) & Inter (UI/body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <!-- Cinematic Ambient Layer — NO grid -->
+    <div class="hero-ambient-bg" id="ambient-glow-orb"></div>
+    <canvas class="particle-canvas" id="particle-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-dot"></span>
+                <span class="logo-text">The Code Whiz</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#services" class="nav-link" id="link-services">Services</a></li>
+                    <li><a href="#industries" class="nav-link" id="link-industries">Industries</a></li>
+                    <li><a href="#process" class="nav-link" id="link-process">Process</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">About</a></li>
+                    <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#audit" class="btn btn-audit" id="btn-header-audit">
+                    <span>Get Free AI Audit</span>
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-arrow">
+                        <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- HERO: Cinematic Product Launch — THE CODE WHIZ // ARIA        -->
+    <!-- ============================================================ -->
+    <!-- ============================================================ -->
+    <!-- HERO: Apple-Inspired Luxury Launch — THE CODE WHIZ // ARIA    -->
+    <!-- ============================================================ -->
+    <main class="hero-cinematic hero-apple-minimal" id="hero">
+
+        <!-- Living neural background & soft lavender glow orbs -->
+        <canvas id="hero-neural-canvas" class="hero-neural-canvas"></canvas>
+        <div class="hero-depth-layer"></div>
+        <div class="hero-glow-orb hero-glow-orb--primary"></div>
+        <div class="hero-glow-orb hero-glow-orb--secondary"></div>
+
+        <div class="hero-cinematic__inner hero-apple__inner">
+            
+            <!-- LEFT SIDE — Minimal Editorial Content -->
+            <div class="hero-editorial" id="hero-editorial">
+                <div class="hero-label-chip">
+                    <span class="label-dot"></span>
+                    <span class="label-text">THE CODE WHIZ AI LAB</span>
+                </div>
+
+                <h1 class="hero-title hero-title--apple" id="hero-title">
+                    Meet Aria.
+                </h1>
+
+                <p class="hero-subtitle hero-subtitle--apple" id="hero-subtitle">
+                    Your AI Business Consultant helping businesses automate, grow and scale with intelligent AI.
+                </p>
+
+                <!-- Dual Buttons: Primary & Secondary -->
+                <div class="hero-cta-group">
+                    <a href="#audit" class="btn btn-primary-glow" id="btn-start-consultation">
+                        <span>Start Free AI Consultation</span>
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-arrow">
+                            <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <button class="btn btn-secondary-ghost" id="btn-watch-demo">
+                        <span class="play-icon-wrap">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </span>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE — Apple Premium Circular Container -->
+            <div class="hero-circular-stage" id="hero-chamber">
+                
+                <!-- Orbiting Neural Glow Ring -->
+                <div class="circular-neural-ring"></div>
+                <div class="circular-ambient-glow"></div>
+
+                <!-- Orbiting Particles -->
+                <div class="orbit-particle p1"></div>
+                <div class="orbit-particle p2"></div>
+                <div class="orbit-particle p3"></div>
+
+                <!-- Large Circular Glass Frame (320px) -->
+                <div class="aria-circular-frame">
+                    <div class="circular-glass-backdrop"></div>
+                    <img src="aria_hero_circular.png" alt="Aria — AI Business Consultant" class="aria-circular-img hero-aria-portrait" id="aria-portrait" loading="eager" decoding="async" fetchpriority="high">
+                </div>
+
+                <!-- Small AI Online Indicator Pill -->
+                <div class="circular-status-pill">
+                    <span class="status-dot-online" id="hero-status-dot"></span>
+                    <span class="chip-text" id="hero-status-text">AI Online</span>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- HOW IT WORKS: Apple-Inspired Editorial Timeline              -->
+    <!-- ============================================================ -->
+    <section class="how-it-works-section" id="process">
+        <div class="how-container">
+            
+            <!-- Section Header -->
+            <div class="how-header reveal-on-scroll">
+                <div class="how-badge-chip">
+                    <span class="badge-dot"></span>
+                    <span>HOW IT WORKS</span>
+                </div>
+                <h2 class="how-title">How We Transform Your Business with AI</h2>
+                <p class="how-subtitle">From strategy to automation in four simple steps.</p>
+            </div>
+
+            <!-- Timeline Wrapper (Horizontal on Desktop, Vertical on Mobile) -->
+            <div class="how-timeline-wrapper reveal-on-scroll">
+                
+                <!-- Dynamic Progress Line -->
+                <div class="timeline-track-bg">
+                    <div class="timeline-progress-fill" id="timeline-progress-fill"></div>
+                </div>
+
+                <!-- 4 Steps Grid -->
+                <div class="how-steps-grid">
+                    
+                    <!-- Step 1: Discover -->
+                    <div class="how-step-card step-1" data-step="1">
+                        <div class="step-top-bar">
+                            <span class="step-number">01</span>
+                            <div class="aria-guide-avatar-wrap">
+                                <img src="aria_hero_circular.png" alt="Aria Guide" class="aria-guide-avatar-img" loading="lazy" decoding="async">
+                                <span class="aria-guide-dot"></span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Discover</h3>
+                            <p class="step-desc">Free AI Business Audit</p>
+                        </div>
+                        <!-- Aria Personal First-Person Quote -->
+                        <div class="aria-guide-quote-box">
+                            <span class="quote-sparkle">✨</span>
+                            <span class="quote-text">"Let's understand your business."</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Strategize -->
+                    <div class="how-step-card step-2" data-step="2">
+                        <div class="step-top-bar">
+                            <span class="step-number">02</span>
+                            <div class="aria-guide-avatar-wrap">
+                                <img src="aria_hero_circular.png" alt="Aria Guide" class="aria-guide-avatar-img" loading="lazy" decoding="async">
+                                <span class="aria-guide-dot"></span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Strategize</h3>
+                            <p class="step-desc">Custom AI roadmap built for your business.</p>
+                        </div>
+                        <!-- Aria Personal First-Person Quote -->
+                        <div class="aria-guide-quote-box">
+                            <span class="quote-sparkle">✨</span>
+                            <span class="quote-text">"I'll create your AI strategy."</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Build -->
+                    <div class="how-step-card step-3" data-step="3">
+                        <div class="step-top-bar">
+                            <span class="step-number">03</span>
+                            <div class="aria-guide-avatar-wrap">
+                                <img src="aria_hero_circular.png" alt="Aria Guide" class="aria-guide-avatar-img" loading="lazy" decoding="async">
+                                <span class="aria-guide-dot"></span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Build</h3>
+                            <p class="step-desc">We develop and integrate AI solutions.</p>
+                        </div>
+                        <!-- Aria Personal First-Person Quote -->
+                        <div class="aria-guide-quote-box">
+                            <span class="quote-sparkle">✨</span>
+                            <span class="quote-text">"We'll build your AI solution."</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Scale -->
+                    <div class="how-step-card step-4" data-step="4">
+                        <div class="step-top-bar">
+                            <span class="step-number">04</span>
+                            <div class="aria-guide-avatar-wrap">
+                                <img src="aria_hero_circular.png" alt="Aria Guide" class="aria-guide-avatar-img" loading="lazy" decoding="async">
+                                <span class="aria-guide-dot"></span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Scale</h3>
+                            <p class="step-desc">Monitor, optimize and continuously improve with AI.</p>
+                        </div>
+                        <!-- Aria Personal First-Person Quote -->
+                        <div class="aria-guide-quote-box">
+                            <span class="quote-sparkle">✨</span>
+                            <span class="quote-text">"Now let's help you scale."</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section (Awwwards / Studio Freight Editorial Layout) -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <!-- Asymmetrical Grid: 35% Left Editorial Content, 65% Right Overlapping Floating Panels -->
+            <div class="services-editorial-layout">
+                
+                <!-- Left Editorial Column (35%) -->
+                <div class="services-editorial-left">
+                    <div class="badge" id="services-badge">
+                        <span class="badge-pulse"></span>
+                        <span class="badge-text">OUR SERVICES</span>
+                    </div>
+                    <h2 class="services-editorial-heading" id="services-title">
+                        What We<br>
+                        <span class="gradient-text">Build.</span>
+                    </h2>
+                    <p class="services-editorial-paragraph" id="services-desc">
+                        We design intelligent digital experiences that simplify operations, elevate brands, and accelerate business growth.
+                    </p>
+                    <a href="#build-section" class="services-cta-link" id="services-cta">
+                        <span>Explore Our Services</span>
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="cta-arrow">
+                            <path d="M3.33301 8H12.6663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 3.3335L12.6667 8.00016L8 12.6668" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Right Overlapping Floating Glass Panels (65%) -->
+                <div class="services-panels-wrapper">
+                    
+                    <!-- Panel One: AI Automation (Large, Top Left, Rotation -2.5deg) -->
+                    <div class="glass-panel panel-automation" id="panel-automation">
+                        <div class="panel-glow-backdrop"></div>
+                        <div class="panel-hero-visual visual-workflow">
+                            <div class="panel-workflow-diagram">
+                                <div class="diagram-node node-1">
+                                    <span class="node-dot"></span>
+                                    <span class="node-label">Data Ingest</span>
+                                </div>
+                                <div class="diagram-line">
+                                    <div class="diagram-pulse"></div>
+                                </div>
+                                <div class="diagram-node node-2 active-node">
+                                    <span class="node-dot lavender-glow"></span>
+                                    <span class="node-label">AI Processing</span>
+                                </div>
+                                <div class="diagram-line">
+                                    <div class="diagram-pulse delay"></div>
+                                </div>
+                                <div class="diagram-node node-3">
+                                    <span class="node-dot green-glow"></span>
+                                    <span class="node-label">Auto Deploy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="panel-badge-pill">01 / AUTOMATION</div>
+                            <h3 class="panel-title">AI Automation</h3>
+                            <p class="panel-description">Streamline operations with custom intelligent workflows and automated pipelines.</p>
+                        </div>
+                    </div>
+
+                    <!-- Panel Two: Modern Websites (Medium, Center Right, Rotation +2deg, Overlapping) -->
+                    <div class="glass-panel panel-websites" id="panel-websites">
+                        <div class="panel-glow-backdrop"></div>
+                        <div class="panel-hero-visual visual-macbook">
+                            <div class="macbook-mockup">
+                                <div class="macbook-header">
+                                    <span class="mac-dot red"></span>
+                                    <span class="mac-dot yellow"></span>
+                                    <span class="mac-dot green"></span>
+                                    <span class="mac-url">thecodewhiz.com</span>
+                                </div>
+                                <div class="macbook-screen">
+                                    <div class="screen-hero-preview">
+                                        <div class="screen-tag">STUDIO RELEASE</div>
+                                        <div class="screen-title">Pure Digital Elegance</div>
+                                        <div class="screen-btn-preview">View Work →</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="panel-badge-pill">02 / WEBSITES</div>
+                            <h3 class="panel-title">Modern Websites</h3>
+                        </div>
+                    </div>
+
+                    <!-- Panel Three: AI Chatbots (Small, Bottom Offset, Rotation -3deg, Overlapping) -->
+                    <div class="glass-panel panel-chatbots" id="panel-chatbots">
+                        <div class="panel-glow-backdrop"></div>
+                        <div class="panel-hero-visual visual-iphone">
+                            <div class="iphone-mockup">
+                                <div class="iphone-island"></div>
+                                <div class="iphone-screen">
+                                    <div class="chat-bubble user">Need automated intake?</div>
+                                    <div class="chat-bubble ai">
+                                        <span class="bot-indicator"></span>
+                                        AI Agent active. Generating schedule...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="panel-badge-pill">03 / CONVERSATION</div>
+                            <h3 class="panel-title">AI Chatbots</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Build Section (Apple × Linear × Vercel Premium Aesthetic) -->
+    <section class="build-section" id="build-section">
+        <div class="build-container">
+            <div class="build-layout">
+                
+                <!-- Left Column: Large Headline -->
+                <div class="build-left">
+                    <div class="badge" id="build-badge">
+                        <span class="badge-pulse"></span>
+                        <span class="badge-text">WHAT WE BUILD</span>
+                    </div>
+                    
+                    <h2 class="build-heading" id="build-title">
+                        Digital Solutions<br>
+                        Built For The<br>
+                        <span class="gradient-text">AI Era.</span>
+                    </h2>
+
+                    <p class="build-tagline">
+                        Engineered with surgical precision, modern architectures, and bespoke intelligence for ambitious brands.
+                    </p>
+                </div>
+
+                <!-- Right Column: Premium Horizontal Showcase Cards -->
+                <div class="build-showcase-list">
+                    
+                    <!-- Showcase Item 1: AI Automation Systems -->
+                    <div class="showcase-card" id="showcase-automation">
+                        <div class="showcase-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="showcase-svg">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="showcase-info">
+                            <h3 class="showcase-title">AI Automation Systems</h3>
+                            <p class="showcase-text">Automate repetitive work with intelligent systems that save time and scale operations.</p>
+                        </div>
+                        <div class="showcase-arrow-box">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+                                <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 4.1665L15.8333 9.99984L10 15.8332" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Item 2: Custom Web Experiences -->
+                    <div class="showcase-card" id="showcase-websites">
+                        <div class="showcase-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="showcase-svg">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                                <line x1="6" y1="7" x2="8" y2="7"/>
+                                <line x1="10" y1="7" x2="18" y2="7"/>
+                            </svg>
+                        </div>
+                        <div class="showcase-info">
+                            <h3 class="showcase-title">Custom Web Experiences</h3>
+                            <p class="showcase-text">High-performance websites designed to turn visitors into customers.</p>
+                        </div>
+                        <div class="showcase-arrow-box">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+                                <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 4.1665L15.8333 9.99984L10 15.8332" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Item 3: AI Business Solutions -->
+                    <div class="showcase-card" id="showcase-solutions">
+                        <div class="showcase-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="showcase-svg">
+                                <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"/>
+                                <path d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"/>
+                                <line x1="6" y1="9" x2="18" y2="9"/>
+                                <line x1="6" y1="15" x2="18" y2="15"/>
+                            </svg>
+                        </div>
+                        <div class="showcase-info">
+                            <h3 class="showcase-title">AI Business Solutions</h3>
+                            <p class="showcase-text">Smart digital tools built around your business goals.</p>
+                        </div>
+                        <div class="showcase-arrow-box">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+                                <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 4.1665L15.8333 9.99984L10 15.8332" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    <!-- Section 4: Intelligence Behind Every Solution (Apple × OpenAI × Vercel Luxury Consultancy Aesthetic) -->
+    <section class="consultancy-section" id="intelligence">
+        <div class="consultancy-container">
+            
+            <!-- Centered Header -->
+            <div class="consultancy-header">
+                <div class="badge" id="consultancy-badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">INTELLIGENCE BEHIND EVERY SOLUTION</span>
+                </div>
+                
+                <h2 class="consultancy-statement" id="consultancy-title">
+                    Building Intelligent Systems<br>
+                    That Move Businesses <span class="gradient-text">Forward.</span>
+                </h2>
+                
+                <p class="consultancy-subtitle" id="consultancy-desc">
+                    We combine artificial intelligence, automation, and modern digital experiences to create solutions that feel effortless.
+                </p>
+            </div>
+
+            <!-- Premium Floating Software Showcase Panel -->
+            <div class="consultancy-showcase-panel" id="consultancy-panel">
+                <div class="showcase-panel-header">
+                    <div class="showcase-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="showcase-tab-title">SYSTEM ARCHITECTURE // v4.2</div>
+                    <div class="showcase-status-badge">
+                        <span class="status-dot"></span>
+                        LIVE PIPELINE
+                    </div>
+                </div>
+                
+                <div class="showcase-panel-body">
+                    <!-- Workflow Pipeline Nodes -->
+                    <div class="panel-pipeline-flow">
+                        <div class="pipeline-card">
+                            <span class="card-step">STEP 01</span>
+                            <span class="card-name">Data Ingest & Vectorization</span>
+                            <span class="card-metric">1.2M tokens / sec</span>
+                        </div>
+                        <div class="pipeline-connector">
+                            <div class="pipeline-pulse"></div>
+                        </div>
+                        <div class="pipeline-card active-pipeline">
+                            <span class="card-step">STEP 02</span>
+                            <span class="card-name">Autonomous AI Routing</span>
+                            <span class="card-metric">Latency &lt; 42ms</span>
+                        </div>
+                        <div class="pipeline-connector">
+                            <div class="pipeline-pulse delay"></div>
+                        </div>
+                        <div class="pipeline-card">
+                            <span class="card-step">STEP 03</span>
+                            <span class="card-name">Enterprise CRM Sync</span>
+                            <span class="card-metric">100% Accuracy</span>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Grid inside Software Interface -->
+                    <div class="panel-metrics-row">
+                        <div class="panel-metric-box">
+                            <span class="metric-num">$420,000+</span>
+                            <span class="metric-title">Cost Efficiency Generated</span>
+                        </div>
+                        <div class="panel-metric-box">
+                            <span class="metric-num">99.98%</span>
+                            <span class="metric-title">System Uptime</span>
+                        </div>
+                        <div class="panel-metric-box">
+                            <span class="metric-num">3.8x</span>
+                            <span class="metric-title">Operational Velocity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three Elegant Capability Highlights -->
+            <div class="consultancy-capabilities-grid">
+                
+                <div class="capability-item" id="capability-01">
+                    <div class="capability-number">01</div>
+                    <div class="capability-body">
+                        <h3 class="capability-title">AI Automation</h3>
+                        <p class="capability-text">Transform operations with intelligent workflows.</p>
+                    </div>
+                </div>
+
+                <div class="capability-item" id="capability-02">
+                    <div class="capability-number">02</div>
+                    <div class="capability-body">
+                        <h3 class="capability-title">Digital Products</h3>
+                        <p class="capability-text">Create scalable experiences designed for modern businesses.</p>
+                    </div>
+                </div>
+
+                <div class="capability-item" id="capability-03">
+                    <div class="capability-number">03</div>
+                    <div class="capability-body">
+                        <h3 class="capability-title">Growth Systems</h3>
+                        <p class="capability-text">Use data-driven technology to accelerate results.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    <!-- Section 5: Why Businesses Choose Us (Apple Keynote Inspired) -->
+    <section class="why-us-section" id="why-us">
+        <div class="why-us-container">
+            
+            <!-- Keynote Main Header -->
+            <div class="why-us-header">
+                <div class="badge" id="why-us-badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">WHY BUSINESSES CHOOSE US</span>
+                </div>
+                
+                <h2 class="why-us-heading" id="why-us-title">
+                    Technology Is Changing.<br>
+                    <span class="gradient-text">We Help Businesses Lead.</span>
+                </h2>
+                
+                <p class="why-us-subtext" id="why-us-desc">
+                    From intelligent automation to custom digital experiences, we create systems that help companies work smarter, move faster, and grow confidently.
+                </p>
+            </div>
+
+            <!-- Refined Workflow Timeline (Discover → Design → Build → Optimize) -->
+            <div class="workflow-timeline-wrapper">
+                <div class="timeline-title-label">OUR ENTERPRISE FRAMEWORK</div>
+                <div class="timeline-track">
+                    <div class="timeline-step">
+                        <span class="timeline-node active"></span>
+                        <span class="timeline-label">Discover</span>
+                    </div>
+                    <div class="timeline-line">
+                        <div class="timeline-pulse"></div>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="timeline-node"></span>
+                        <span class="timeline-label">Design</span>
+                    </div>
+                    <div class="timeline-line">
+                        <div class="timeline-pulse delay-1"></div>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="timeline-node"></span>
+                        <span class="timeline-label">Build</span>
+                    </div>
+                    <div class="timeline-line">
+                        <div class="timeline-pulse delay-2"></div>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="timeline-node"></span>
+                        <span class="timeline-label">Optimize</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3-Column Keynote Value Proposition Grid -->
+            <div class="why-us-grid">
+                
+                <!-- Column 01 -->
+                <div class="why-us-col" id="why-us-01">
+                    <div class="col-header">
+                        <span class="col-num">01</span>
+                        <div class="col-divider"></div>
+                    </div>
+                    <h3 class="col-title">Strategic Thinking</h3>
+                    <p class="col-text">Every solution starts with understanding your business goals, challenges, and opportunities.</p>
+                </div>
+
+                <!-- Column 02 -->
+                <div class="why-us-col" id="why-us-02">
+                    <div class="col-header">
+                        <span class="col-num">02</span>
+                        <div class="col-divider"></div>
+                    </div>
+                    <h3 class="col-title">Advanced Technology</h3>
+                    <p class="col-text">We combine AI, automation, and modern development practices to build powerful digital systems.</p>
+                </div>
+
+                <!-- Column 03 -->
+                <div class="why-us-col" id="why-us-03">
+                    <div class="col-header">
+                        <span class="col-num">03</span>
+                        <div class="col-divider"></div>
+                    </div>
+                    <h3 class="col-title">Long-Term Partnership</h3>
+                    <p class="col-text">We don't just deliver projects. We build technology that grows with your business.</p>
+                </div>
+
+            </div>
+
+        </div>
+    <!-- Section 6: Signature Flagship Section - "The Future Is Already Being Built" -->
+    <section class="signature-section" id="future-core">
+        <div class="signature-ambient-glow"></div>
+        <div class="signature-container">
+            
+            <!-- Flagship Editorial Statement Header -->
+            <div class="signature-header">
+                <div class="badge" id="signature-badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">THE FUTURE IS ALREADY BEING BUILT</span>
+                </div>
+                
+                <h2 class="signature-statement" id="signature-title">
+                    We don't just build software.<br>
+                    <span class="gradient-text">We build intelligent ecosystems.</span>
+                </h2>
+            </div>
+
+            <!-- Immersive Flagship Experience Display: Central AI Core + 4 Floating Moments -->
+            <div class="signature-stage">
+                
+                <!-- Central Floating Holographic AI Core -->
+                <div class="ai-core-wrapper" id="ai-core">
+                    <div class="core-glass-sphere">
+                        <div class="core-inner-nucleus"></div>
+                        <div class="core-orbital-ring ring-1"></div>
+                        <div class="core-orbital-ring ring-2"></div>
+                        <div class="core-orbital-ring ring-3"></div>
+                        <div class="core-data-stream"></div>
+                    </div>
+                </div>
+
+                <!-- 4 Floating Technology Moments Surrounding Core -->
+                <div class="floating-moment moment-top-left" id="moment-think">
+                    <div class="moment-glass-card">
+                        <span class="moment-num">01</span>
+                        <h3 class="moment-title">Think</h3>
+                        <p class="moment-desc">AI analyzes complex problems.</p>
+                    </div>
+                </div>
+
+                <div class="floating-moment moment-top-right" id="moment-create">
+                    <div class="moment-glass-card">
+                        <span class="moment-num">02</span>
+                        <h3 class="moment-title">Create</h3>
+                        <p class="moment-desc">Systems transform ideas into digital experiences.</p>
+                    </div>
+                </div>
+
+                <div class="floating-moment moment-bottom-left" id="moment-automate">
+                    <div class="moment-glass-card">
+                        <span class="moment-num">03</span>
+                        <h3 class="moment-title">Automate</h3>
+                        <p class="moment-desc">Businesses run smarter with intelligent workflows.</p>
+                    </div>
+                </div>
+
+                <div class="floating-moment moment-bottom-right" id="moment-scale">
+                    <div class="moment-glass-card">
+                        <span class="moment-num">04</span>
+                        <h3 class="moment-title">Scale</h3>
+                        <p class="moment-desc">Technology grows with your vision.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    <!-- Section 7: Meet Your AI Business Consultant -->
+    <section class="ai-consultant-section" id="consultant">
+        <div class="consultant-container">
+            <div class="consultant-layout">
+                
+                <!-- Left Side: Editorial Content -->
+                <div class="consultant-left">
+                    <div class="badge" id="consultant-badge">
+                        <span class="badge-pulse"></span>
+                        <span class="badge-text">MEET YOUR AI CONSULTANT</span>
+                    </div>
+                    
+                    <h2 class="consultant-heading" id="consultant-title">
+                        Have An Idea?<br>
+                        <span class="gradient-text">Let's Build It With AI.</span>
+                    </h2>
+                    
+                    <p class="consultant-subtext" id="consultant-desc">
+                        Get instant insights on how AI, automation, and digital solutions can transform your business.
+                    </p>
+
+                    <button class="btn btn-primary consultant-cta" id="btn-start-consultation">
+                        <span>Start Your AI Consultation</span>
+                        <svg viewBox="0 0 16 16" fill="none" class="btn-arrow">
+                            <path d="M3.33301 8H12.6663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 3.3335L12.6667 8.00016L8 12.6668" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Right Side: Floating Interactive AI Chat Interface -->
+                <div class="consultant-chat-wrapper">
+                    <div class="consultant-chat-window" id="consultant-chat">
+                        
+                        <!-- Window Topbar -->
+                        <div class="chat-topbar">
+                            <div class="chat-avatar-box">
+                                <span class="chat-status-dot"></span>
+                                <span class="chat-assistant-name">THE CODE WHIZ // ARIA (AI CONSULTANT)</span>
+                            </div>
+                            <div class="chat-badge-pill">24/7 ONLINE</div>
+                        </div>
+
+                        <!-- Chat Messages Thread -->
+                        <div class="chat-body" id="consultant-chat-body">
+                            <div class="consultant-msg ai-msg">
+                                <div class="msg-bubble">
+                                    <p>Hi 👋 I'm Aria, your AI Business Consultant.<br><br>I help businesses discover how AI, automation, and digital solutions can improve their growth.<br><br>What would you like to explore today?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Options Chips -->
+                        <div class="chat-quick-options" id="chat-quick-options">
+                            <button class="chip-btn" data-topic="Automate My Business">🚀 Automate My Business</button>
+                            <button class="chip-btn" data-topic="Build A Website">🌐 Build A Website</button>
+                            <button class="chip-btn" data-topic="Create An AI Solution">🤖 Create An AI Solution</button>
+                            <button class="chip-btn" data-topic="Improve My Business">📈 Improve My Business</button>
+                            <button class="chip-btn" data-topic="Talk To A Human">💬 Talk To A Human</button>
+                        </div>
+
+                        <!-- Input Bar -->
+                        <div class="chat-input-bar">
+                            <input type="text" id="consultant-input" placeholder="Type your response or question..." />
+                            <button id="btn-send-consultant" class="chat-send-btn">
+                                <svg viewBox="0 0 16 16" fill="none" class="send-icon">
+                                    <path d="M14 2L7.5 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14 2L9.33333 14L7.5 8.5L2 6.66667L14 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- Section 8: Selected Intelligence Projects -->
+    <section class="projects-section" id="projects">
+        <div class="projects-container">
+            
+            <!-- Header -->
+            <div class="projects-header">
+                <div class="badge" id="projects-badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">SELECTED INTELLIGENCE PROJECTS</span>
+                </div>
+                
+                <h2 class="projects-heading" id="projects-title">
+                    Solutions Designed To<br>
+                    Create <span class="gradient-text">Real Impact.</span>
+                </h2>
+                
+                <p class="projects-subtext" id="projects-desc">
+                    Explore how intelligent technology can transform ideas into powerful digital experiences.
+                </p>
+            </div>
+
+            <!-- 3 Large Horizontal Product Showcase Cards -->
+            <div class="projects-list">
+                
+                <!-- Project 01 -->
+                <div class="project-card" id="project-01">
+                    <div class="project-visual visual-dashboard">
+                        <div class="project-mockup-header">
+                            <span class="pm-dot red"></span>
+                            <span class="pm-dot yellow"></span>
+                            <span class="pm-dot green"></span>
+                            <span class="pm-title">AUTOMATION_CORE_v2.1</span>
+                        </div>
+                        <div class="project-mockup-body">
+                            <div class="mockup-chart-row">
+                                <div class="chart-box">
+                                    <span class="chart-label">WORKFLOW EFFICIENCY</span>
+                                    <span class="chart-value">+340%</span>
+                                </div>
+                                <div class="chart-box">
+                                    <span class="chart-label">LATENCY REDUCTION</span>
+                                    <span class="chart-value">&lt; 18ms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-num">PROJECT 01</span>
+                        <h3 class="project-name">AI Business Automation Platform</h3>
+                        <p class="project-description">An intelligent system designed to reduce manual operations and improve business efficiency.</p>
+                        
+                        <div class="project-metrics-flow">
+                            <div class="flow-step">
+                                <span class="flow-tag">CHALLENGE</span>
+                                <span class="flow-val">Manual workflow bottleneck</span>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="flow-step">
+                                <span class="flow-tag">SOLUTION</span>
+                                <span class="flow-val">Custom AI Agent Routing</span>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="flow-step">
+                                <span class="flow-tag">IMPACT</span>
+                                <span class="flow-val">78% Cost Reduction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="project-card" id="project-02">
+                    <div class="project-visual visual-chatbot">
+                        <div class="project-mockup-header">
+                            <span class="pm-dot red"></span>
+                            <span class="pm-dot yellow"></span>
+                            <span class="pm-dot green"></span>
+                            <span class="pm-title">CX_ASSISTANT_ENGINE</span>
+                        </div>
+                        <div class="project-mockup-body">
+                            <div class="chat-preview-bubble">
+                                <span class="chat-bot-dot"></span>
+                                <span>24/7 Customer Engagement Active</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-num">PROJECT 02</span>
+                        <h3 class="project-name">AI Customer Experience Assistant</h3>
+                        <p class="project-description">Smart conversational experiences that help businesses engage customers 24/7.</p>
+                        
+                        <div class="project-metrics-flow">
+                            <div class="flow-step">
+                                <span class="flow-tag">CHALLENGE</span>
+                                <span class="flow-val">High customer support latency</span>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="flow-step">
+                                <span class="flow-tag">SOLUTION</span>
+                                <span class="flow-val">24/7 Autonomous Qualifier</span>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="flow-step">
+                                <span class="flow-tag">IMPACT</span>
+                                <span class="flow-val">3.4x Lead Conversion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="project-card" id="project-03">
+                    <div class="project-visual visual-product">
+                        <div class="project-mockup-header">
+                            <span class="pm-dot red"></span>
+                            <span class="pm-dot yellow"></span>
+                            <span class="pm-dot green"></span>
+                            <span class="pm-title">DIGITAL_STUDIO_APP</span>
+                        </div>
+                        <div class="project-mockup-body">
+                            <div class="app-preview-box">
+                                <span class="app-badge">NEXT.JS PLATFORM</span>
+                                <span class="app-headline">Scalable Digital Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-num">PROJECT 03</span>
+                        <h3 class="project-name">Custom Digital Product</h3>
+                        <p class="project-description">Scalable digital products built with modern technology and AI capabilities.</p>
+                        
+                        <div class="project-metrics-flow">
+                            <div class="flow-step">
+                                <span class="flow-tag">CHALLENGE</span>
+                                <span class="flow-val">Outdated legacy platform</span>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="flow-step">
+                                <span class="flow-tag">SOLUTION</span>
+                                <span class="flow-val">Next.js + AI Design System</span>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="flow-step">
+                                <span class="flow-tag">IMPACT</span>
+                                <span class="flow-val">99.9% System Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer CTA -->
+            <div class="projects-cta-footer">
+    <!-- ============================================================ -->
+    <!-- SECTION: Free AI Business Audit — Interactive Aria Consultation -->
+    <!-- ============================================================ -->
+    <section class="audit-section" id="audit">
+        <div class="audit-ambient-bg"></div>
+        <div class="audit-container">
+
+            <!-- Header -->
+            <div class="audit-header">
+                <div class="badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">CHAPTER 02 // LIVE CONSULTATION</span>
+                </div>
+                <h2 class="audit-title">Free AI Business Audit</h2>
+                <p class="audit-subtitle">Answer a few questions and Aria will generate personalized AI recommendations.</p>
+            </div>
+
+            <!-- Main Audit Stage Box -->
+            <div class="audit-stage-card" id="audit-stage-card">
+
+                <!-- Aria Header Avatar & Status -->
+                <div class="audit-aria-bar">
+                    <div class="audit-aria-avatar">
+                        <img src="aria_avatar.png" alt="Aria" loading="lazy" decoding="async" width="44" height="44">
+                    </div>
+                    <div class="audit-aria-info">
+                        <span class="audit-aria-name">ARIA • AI Business Growth Consultant</span>
+                        <span class="audit-aria-status" id="audit-step-indicator">Step 1 of 3</span>
+                    </div>
+                </div>
+
+                <!-- STEP 1: Industry -->
+                <div class="audit-step-pane active" id="audit-step-1">
+                    <h3 class="audit-question">"What industry are you in?"</h3>
+                    <div class="audit-options-grid">
+                        <button class="audit-opt-btn" data-step="1" data-value="Restaurant">
+                            <span class="opt-icon">🍽️</span> Restaurant
+                        </button>
+                        <button class="audit-opt-btn" data-step="1" data-value="Healthcare">
+                            <span class="opt-icon">🏥</span> Healthcare
+                        </button>
+                        <button class="audit-opt-btn" data-step="1" data-value="Real Estate">
+                            <span class="opt-icon">🏢</span> Real Estate
+                        </button>
+                        <button class="audit-opt-btn" data-step="1" data-value="E-commerce">
+                            <span class="opt-icon">🛍️</span> E-commerce
+                        </button>
+                        <button class="audit-opt-btn" data-step="1" data-value="Education">
+                            <span class="opt-icon">🎓</span> Education
+                        </button>
+                        <button class="audit-opt-btn" data-step="1" data-value="Other">
+                            <span class="opt-icon">⚡</span> Other
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Challenge -->
+                <div class="audit-step-pane" id="audit-step-2">
+                    <h3 class="audit-question">"What is your biggest challenge?"</h3>
+                    <div class="audit-options-grid">
+                        <button class="audit-opt-btn" data-step="2" data-value="Getting more customers">
+                            <span class="opt-icon">📈</span> Getting more customers
+                        </button>
+                        <button class="audit-opt-btn" data-step="2" data-value="Saving time">
+                            <span class="opt-icon">⏱️</span> Saving time
+                        </button>
+                        <button class="audit-opt-btn" data-step="2" data-value="Automating tasks">
+                            <span class="opt-icon">🤖</span> Automating tasks
+                        </button>
+                        <button class="audit-opt-btn" data-step="2" data-value="Customer support">
+                            <span class="opt-icon">💬</span> Customer support
+                        </button>
+                        <button class="audit-opt-btn" data-step="2" data-value="Sales">
+                            <span class="opt-icon">💼</span> Sales
+                        </button>
+                        <button class="audit-opt-btn" data-step="2" data-value="Marketing">
+                            <span class="opt-icon">🎯</span> Marketing
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Employees -->
+                <div class="audit-step-pane" id="audit-step-3">
+                    <h3 class="audit-question">"How many employees?"</h3>
+                    <div class="audit-options-grid grid-4-col">
+                        <button class="audit-opt-btn" data-step="3" data-value="1-5">
+                            <span class="opt-icon">👤</span> 1–5
+                        </button>
+                        <button class="audit-opt-btn" data-step="3" data-value="5-20">
+                            <span class="opt-icon">👥</span> 5–20
+                        </button>
+                        <button class="audit-opt-btn" data-step="3" data-value="20-100">
+                            <span class="opt-icon">🏢</span> 20–100
+                        </button>
+                        <button class="audit-opt-btn" data-step="3" data-value="100+">
+                            <span class="opt-icon">🌐</span> 100+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 4: Premium Loading Animation -->
+                <div class="audit-step-pane" id="audit-step-loading">
+                    <div class="audit-loading-wrapper">
+                        <div class="audit-loader-orb">
+                            <div class="loader-core"></div>
+                            <div class="loader-ring ring-1"></div>
+                            <div class="loader-ring ring-2"></div>
+                        </div>
+                        <div class="audit-loading-texts">
+                            <p class="loading-status-text" id="audit-loading-text">Initializing AI...</p>
+                            <div class="loading-bar-track">
+                                <div class="loading-bar-fill" id="audit-loading-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RESULT STAGE: AI Report Card -->
+                <div class="audit-step-pane" id="audit-step-report">
+                    <div class="report-card-header">
+                        <div class="report-badge">CONFIDENTIAL AUDIT REPORT</div>
+                        <h3 class="report-title" id="report-title">Custom AI Strategy Report</h3>
+                        <p class="report-subtitle" id="report-summary">Based on your industry and team scale</p>
+                    </div>
+
+                    <!-- Report Metrics Grid -->
+                    <div class="report-metrics-grid">
+                        <div class="report-metric-card">
+                            <span class="metric-label">Business Score</span>
+                            <div class="metric-val-wrap">
+                                <span class="metric-value" id="rep-val-score">92</span>
+                                <span class="metric-unit">/100</span>
+                            </div>
+                            <div class="report-progress-track">
+                                <div class="report-progress-fill" id="rep-bar-score" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="report-metric-card">
+                            <span class="metric-label">Automation Potential</span>
+                            <div class="metric-val-wrap">
+                                <span class="metric-value" id="rep-val-potential">85%</span>
+                            </div>
+                            <div class="report-progress-track">
+                                <div class="report-progress-fill lavender" id="rep-bar-potential" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="report-metric-card">
+                            <span class="metric-label">Estimated Time Saved</span>
+                            <div class="metric-val-wrap">
+                                <span class="metric-value" id="rep-val-time">24 hrs</span>
+                                <span class="metric-unit">/ week</span>
+                            </div>
+                            <div class="report-progress-track">
+                                <div class="report-progress-fill green" id="rep-bar-time" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Growth Opportunities & Recommended Services -->
+                    <div class="report-details-grid">
+                        <div class="report-detail-box">
+                            <h4 class="detail-box-title">🎯 Growth Opportunities</h4>
+                            <ul class="detail-list" id="report-growth-list">
+                                <li>Automated 24/7 lead qualification & scheduling</li>
+                                <li>Eliminate manual repetitive data workflows</li>
+                                <li>Targeted AI marketing automation</li>
+                            </ul>
+                        </div>
+
+                        <div class="report-detail-box">
+                            <h4 class="detail-box-title">🤖 Recommended AI Services</h4>
+                            <div class="detail-tags" id="report-services-tags">
+                                <span class="service-pill">AI Customer Agent</span>
+                                <span class="service-pill">Workflow Automation Pipeline</span>
+                                <span class="service-pill">Predictive Growth Engine</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: CTA -->
+                    <div class="report-cta-box">
+                        <h4 class="report-cta-question">Want Aria to build this strategy for your business?</h4>
+                        <button class="btn-talk-glass btn-audit-strategy" id="btn-book-strategy">
+                            <span>Book Free Strategy Call</span>
+                            <svg viewBox="0 0 16 16" fill="none" class="btn-arrow">
+                                <path d="M3.33301 8H12.6663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 3.3335L12.6667 8.00016L8 12.6668" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1 — FEATURED CLIENT LOGO WALL MARQUEE -->
+    <!-- ============================================================ -->
+    <section class="logos-section" id="clients">
+        <div class="logos-title">Trusted by ambitious businesses</div>
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <span class="logo-item">⚡ NEXUS AI</span>
+                <span class="logo-item">✦ ALTO LABS</span>
+                <span class="logo-item">◈ SPECTRA TECH</span>
+                <span class="logo-item">❖ AURA HEALTH</span>
+                <span class="logo-item">▲ VERTEX REALTY</span>
+                <span class="logo-item">⬡ ORBITAL</span>
+                <span class="logo-item">✺ VORTEX SYSTEMS</span>
+                <span class="logo-item">⚡ NEXUS AI</span>
+                <span class="logo-item">✦ ALTO LABS</span>
+                <span class="logo-item">◈ SPECTRA TECH</span>
+                <span class="logo-item">❖ AURA HEALTH</span>
+                <span class="logo-item">▲ VERTEX REALTY</span>
+                <span class="logo-item">⬡ ORBITAL</span>
+                <span class="logo-item">✺ VORTEX SYSTEMS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2 — SUCCESS STORIES (CASE STUDY CARDS) -->
+    <!-- ============================================================ -->
+    <section class="case-studies-section" id="cases">
+        <div class="audit-container">
+            <div class="audit-header">
+                <div class="badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">PROVEN IMPACT</span>
+                </div>
+                <h2 class="audit-title">Real Results For Growth-Driven Companies</h2>
+                <p class="audit-subtitle">See how our custom AI solutions automate operations and scale revenue.</p>
+            </div>
+
+            <div class="case-grid">
+                <!-- Case 01 -->
+                <div class="case-study-card">
+                    <div>
+                        <span class="case-industry-tag">E-Commerce & Retail</span>
+                        <h3 class="case-title">Autonomous Sales Agent & Cart Qualifier</h3>
+                        <div class="case-detail-row"><strong>Challenge:</strong> High cart abandonment & support triage queues.</div>
+                        <div class="case-detail-row"><strong>AI Solution:</strong> 24/7 AI Customer Qualifier & dynamic pricing assistant.</div>
+                    </div>
+                    <div class="case-metrics-badges">
+                        <span class="case-badge">↑ <span class="count-number" data-count="42" data-suffix="%">42%</span> More Leads</span>
+                        <span class="case-badge">↓ <span class="count-number" data-count="65" data-suffix="%">65%</span> Less Manual Work</span>
+                        <span class="case-badge">24/7 Support</span>
+                    </div>
+                </div>
+
+                <!-- Case 02 -->
+                <div class="case-study-card">
+                    <div>
+                        <span class="case-industry-tag">Healthcare & Medical</span>
+                        <h3 class="case-title">Voice AI Patient Triage & Booking</h3>
+                        <div class="case-detail-row"><strong>Challenge:</strong> High phone congestion & appointment scheduling latency.</div>
+                        <div class="case-detail-row"><strong>AI Solution:</strong> Voice AI Receptionist with real-time EHR integration.</div>
+                    </div>
+                    <div class="case-metrics-badges">
+                        <span class="case-badge">↓ <span class="count-number" data-count="82" data-suffix="%">82%</span> Response Time</span>
+                        <span class="case-badge">↑ <span class="count-number" data-count="3.8" data-prefix="" data-suffix="x">3.8x</span> Booking Rate</span>
+                        <span class="case-badge">HIPAA Compliant</span>
+                    </div>
+                </div>
+
+                <!-- Case 03 -->
+                <div class="case-study-card">
+                    <div>
+                        <span class="case-industry-tag">Commercial Real Estate</span>
+                        <h3 class="case-title">Predictive Lead Router & Doc AI</h3>
+                        <div class="case-detail-row"><strong>Challenge:</strong> Slow lead response & manual contract routing delays.</div>
+                        <div class="case-detail-row"><strong>AI Solution:</strong> Automated lead scoring & document AI extraction pipeline.</div>
+                    </div>
+                    <div class="case-metrics-badges">
+                        <span class="case-badge">↑ <span class="count-number" data-count="54" data-suffix="%">54%</span> Revenue Growth</span>
+                        <span class="case-badge"><span class="count-number" data-count="18" data-suffix=" hrs">18 hrs</span> Saved/Week</span>
+                        <span class="case-badge">&lt; 30s Lead Speed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3 — BEFORE VS AFTER INTERACTIVE COMPARISON -->
+    <!-- ============================================================ -->
+    <section class="before-after-section" id="comparison">
+        <div class="audit-container">
+            <div class="audit-header">
+                <div class="badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">CHAPTER 03 // THE AI ADVANTAGE</span>
+                </div>
+                <h2 class="audit-title">Traditional Business vs AI-Powered Agency</h2>
+                <p class="audit-subtitle">Compare legacy bottleneck workflows against autonomous AI efficiency.</p>
+            </div>
+
+            <div class="comparison-card">
+                <!-- Left: Traditional -->
+                <div class="comparison-col col-traditional">
+                    <div class="col-header">
+                        <span class="col-tag">Legacy Approach</span>
+                        <h3 class="col-title">Traditional Business</h3>
+                    </div>
+                    <div class="comparison-list">
+                        <div class="comp-item">
+                            <span class="comp-label">Customer Support</span>
+                            <span class="comp-value">Manual 9-to-5 queues & delayed tickets</span>
+                        </div>
+                        <div class="comp-item">
+                            <span class="comp-label">Lead Generation</span>
+                            <span class="comp-value">Outdated form fills & manual follow-ups</span>
+                        </div>
+                        <div class="comp-item">
+                            <span class="comp-label">Operations</span>
+                            <span class="comp-value">Repetitive data entry & human error</span>
+                        </div>
+                        <div class="comp-item">
+                            <span class="comp-label">Response Time</span>
+                            <span class="comp-value">Hours to days</span>
+                        </div>
+                        <div class="comp-item">
+                            <span class="comp-label">Revenue Growth</span>
+                            <span class="comp-value">Linear & hiring bottlenecked</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: AI Powered -->
+                <div class="comparison-col col-ai">
+                    <div class="col-header">
+                        <span class="col-tag">The Code Whiz Standard</span>
+                        <h3 class="col-title">AI-Powered Business</h3>
+                    </div>
+                    <div class="comparison-list">
+                        <div class="comp-item">
+                            <span class="comp-label">Customer Support</span>
+                            <span class="comp-value">Instant 24/7 autonomous resolution with Aria</span>
+                        </div>
+                        <div class="comp-item">
+                            <span class="comp-label">Lead Generation</span>
+                            <span class="comp-value">Intelligent real-time multi-channel qualifier</span>
+                        </div>
+                        <div class="comp-item">
+                            <span class="comp-label">Operations</span>
+                            <span class="comp-value">Automated zero-friction data pipelines</span>
+                        </div>
+                        <div class="comp-item">
+                            <span class="comp-label">Response Time</span>
+                            <span class="comp-value">Under 5 seconds</span>
+                        </div>
+                        <div class="comp-item">
+                            <span class="comp-label">Revenue Growth</span>
+                            <span class="comp-value">Scalable & automated 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4 — INTERACTIVE ROI CALCULATOR -->
+    <!-- ============================================================ -->
+    <section class="roi-section" id="roi-calculator">
+        <div class="audit-container">
+            <div class="audit-header">
+                <div class="badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">CHAPTER 04 // PROJECTED IMPACT</span>
+                </div>
+                <h2 class="audit-title">Interactive AI Savings Calculator</h2>
+                <p class="audit-subtitle">Adjust the sliders to estimate how much time and money AI automation recovers for your company.</p>
+            </div>
+
+            <div class="roi-card">
+                <!-- Inputs Column -->
+                <div class="roi-inputs-col">
+                    <div class="roi-input-group">
+                        <div class="roi-input-header">
+                            <label class="roi-label" for="roi-emp-slider">Number of Employees</label>
+                            <span class="roi-display-val" id="roi-emp-val">15</span>
+                        </div>
+                        <input type="range" class="roi-slider" id="roi-emp-slider" min="1" max="100" value="15">
+                    </div>
+
+                    <div class="roi-input-group">
+                        <div class="roi-input-header">
+                            <label class="roi-label" for="roi-hrs-slider">Hours spent on repetitive work per week</label>
+                            <span class="roi-display-val" id="roi-hrs-val">12 hrs/wk</span>
+                        </div>
+                        <input type="range" class="roi-slider" id="roi-hrs-slider" min="2" max="40" value="12">
+                    </div>
+
+                    <div class="roi-input-group">
+                        <div class="roi-input-header">
+                            <label class="roi-label" for="roi-cost-slider">Average hourly employee cost ($)</label>
+                            <span class="roi-display-val" id="roi-cost-val">$45/hr</span>
+                        </div>
+                        <input type="range" class="roi-slider" id="roi-cost-slider" min="20" max="150" value="45">
+                    </div>
+                </div>
+
+                <!-- Outputs Column -->
+                <div class="roi-outputs-col">
+                    <div class="output-metric-item">
+                        <span class="output-metric-label">Estimated Yearly Savings</span>
+                        <span class="output-metric-val highlight" id="roi-res-savings">$157,950</span>
+                    </div>
+
+                    <div class="output-metric-item">
+                        <span class="output-metric-label">Hours Recovered / Year</span>
+                        <span class="output-metric-val" id="roi-res-hours">3,510 hrs</span>
+                    </div>
+
+                    <div class="output-metric-item">
+                        <span class="output-metric-label">Potential ROI Multiplier</span>
+                        <span class="output-metric-val" id="roi-res-roi">4.2x</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5 — TESTIMONIALS -->
+    <!-- ============================================================ -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="audit-container">
+            <div class="audit-header">
+                <div class="badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">CLIENT FEEDBACK</span>
+                </div>
+                <h2 class="audit-title">What Industry Leaders Say</h2>
+                <p class="audit-subtitle">Authentic reviews from founders and executives scaling with AI.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="stars-rating">★★★★★</div>
+                    <p class="testimonial-quote">"The Code Whiz completely transformed our customer operations. Aria handled 4,000+ incoming queries in month one with zero latency."</p>
+                    <div class="author-info">
+                        <div class="author-avatar">ER</div>
+                        <div class="author-details">
+                            <span class="author-name">Elena Rostova</span>
+                            <span class="author-role">VP of Growth, Spectra Tech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="stars-rating">★★★★★</div>
+                    <p class="testimonial-quote">"Our lead response time dropped from 4 hours to 4 seconds. Our lead conversion jumped 54% within 60 days of deploying Aria."</p>
+                    <div class="author-info">
+                        <div class="author-avatar">MV</div>
+                        <div class="author-details">
+                            <span class="author-name">Marcus Vance</span>
+                            <span class="author-role">Founder, Vance Real Estate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="stars-rating">★★★★★</div>
+                    <p class="testimonial-quote">"The implementation was seamless and fully enterprise-ready. The AI voice agent alone saved our staff 30+ hours every single week."</p>
+                    <div class="author-info">
+                        <div class="author-avatar">AT</div>
+                        <div class="author-details">
+                            <span class="author-name">Dr. Aris Thorne</span>
+                            <span class="author-role">CMO, Aura Health</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6 — TRUST INDICATORS BADGES BAR -->
+    <!-- ============================================================ -->
+    <section class="trust-badges-section">
+        <div class="audit-container">
+            <div class="trust-badges-bar">
+                <div class="trust-badge-pill"><span class="check">✓</span> AI Automation Experts</div>
+                <div class="trust-badge-pill"><span class="check">✓</span> Fast 14-Day Implementation</div>
+                <div class="trust-badge-pill"><span class="check">✓</span> Enterprise-Grade Security</div>
+                <div class="trust-badge-pill"><span class="check">✓</span> Secure & Private Data Pipeline</div>
+                <div class="trust-badge-pill"><span class="check">✓</span> Human + AI Collaboration</div>
+            </div>
+        </div>
+    <!-- ============================================================ -->
+    <!-- SECTION: Contact Us & Direct Messaging Integrations          -->
+    <!-- ============================================================ -->
+    <section class="contact-section" id="contact">
+        <div class="audit-container">
+            <div class="audit-header">
+                <div class="badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">GET IN TOUCH</span>
+                </div>
+                <h2 class="audit-title">Let's Build Your AI Strategy</h2>
+                <p class="audit-subtitle">Reach out directly via WhatsApp, Instagram, or schedule a strategy consultation.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- WhatsApp Direct Card -->
+                <a href="https://wa.me/923106182076" target="_blank" rel="noopener" class="contact-card whatsapp-card">
+                    <div class="contact-card-icon">💬</div>
+                    <div class="contact-card-info">
+                        <span class="card-tag">DIRECT WHATSAPP</span>
+                        <h3 class="card-heading">+92 310 6182076</h3>
+                        <p class="card-subtext">Instant response for project inquiries & strategy calls.</p>
+                    </div>
+                    <span class="card-arrow">→</span>
+                </a>
+
+                <!-- Instagram Direct Card -->
+                <a href="https://instagram.com/the_codewhiz" target="_blank" rel="noopener" class="contact-card instagram-card">
+                    <div class="contact-card-icon">📸</div>
+                    <div class="contact-card-info">
+                        <span class="card-tag">INSTAGRAM OFFICIAL</span>
+                        <h3 class="card-heading">@the_codewhiz</h3>
+                        <p class="card-subtext">Follow our latest AI builds, reels & tech updates.</p>
+                    </div>
+                    <span class="card-arrow">→</span>
+                </a>
+
+                <!-- Booking / Email Consultation Card -->
+                <div class="contact-card booking-trigger-card btn-consultation">
+                    <div class="contact-card-icon">📅</div>
+                    <div class="contact-card-info">
+                        <span class="card-tag">1-ON-1 STRATEGY SESSION</span>
+                        <h3 class="card-heading">Book Free AI Consultation</h3>
+                        <p class="card-subtext">5-step guided session with Aria.</p>
+                    </div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 7 — FINAL HIGH-CONVERTING LUXURY CTA -->
+    <!-- ============================================================ -->
+    <section class="final-cta-section" id="final-cta">
+        <div class="audit-container">
+            <div class="final-cta-card">
+                
+                <!-- Aria Personal Host Vessel in Final CTA -->
+                <div class="final-cta-aria-host">
+                    <div class="cta-aria-glow"></div>
+                    <div class="cta-aria-avatar-circle">
+                        <img src="aria_avatar.png" alt="Aria — AI Business Consultant" class="cta-aria-img" loading="lazy" decoding="async" width="80" height="80">
+                    </div>
+                    <div class="cta-aria-invite-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Aria is ready to build your strategy</span>
+                    </div>
+                </div>
+
+                <div class="badge">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-text">CHAPTER 05 // YOUR STRATEGY SESSION</span>
+                </div>
+                <h2 class="final-cta-headline">Ready to build your AI advantage?</h2>
+                <p class="final-cta-subheadline">Book a free strategy session with Aria and discover how AI can transform your business operations and revenue growth.</p>
+                <div class="final-cta-buttons">
+                    <button class="btn-talk-glass" id="btn-final-book-call">
+                        <span>Book Strategy Call</span>
+                        <svg viewBox="0 0 16 16" fill="none" class="btn-arrow">
+                            <path d="M3.33301 8H12.6663" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 3.3335L12.6667 8.00016L8 12.6668" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="btn-secondary-ghost" id="btn-final-watch-demo">
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- LUXURY ANIMATED FOOTER: Apple & Linear Inspired Long Footer -->
+    <!-- ============================================================ -->
+    <footer class="luxury-footer" id="footer">
+        <div class="footer-ambient-glow"></div>
+        <div class="footer-container">
+            
+            <!-- Top Hero Brand & Newsletter Row -->
+            <div class="footer-top-row">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <span class="logo-symbol">⚡</span>
+                        <span class="logo-text">THE CODE WHIZ <span class="logo-subtext">// ARIA</span></span>
+                    </div>
+                    <p class="footer-brand-desc">
+                        Engineering next-generation AI automations, intelligent web platforms, and 24/7 AI agents for growth-driven companies worldwide.
+                    </p>
+                    <div class="footer-system-status">
+                        <span class="status-pulse-dot"></span>
+                        <span class="status-text">All AI Systems Operational • Latency &lt; 85ms</span>
+                    </div>
+                </div>
+
+                <!-- Newsletter / Weekly AI Briefing Box -->
+                <div class="footer-newsletter-box">
+                    <span class="newsletter-badge">✨ WEEKLY AI INSIGHTS</span>
+                    <h4 class="newsletter-title">Stay Ahead of AI Innovation</h4>
+                    <p class="newsletter-sub">Get exclusive AI automation frameworks and ROI case studies delivered to your inbox.</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your business email...">
+                        <button class="newsletter-btn" id="btn-newsletter-sub">
+                            <span>Subscribe</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider Line -->
+            <div class="footer-divider"></div>
+
+            <!-- 4-Column Navigation Grid -->
+            <div class="footer-nav-grid">
+                
+                <!-- Col 1: Platform -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Overview</a></li>
+                        <li><a href="#process">How It Works</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#audit">Free AI Audit</a></li>
+                        <li><a href="#cases">Case Studies</a></li>
+                        <li><a href="#roi-calculator">ROI Calculator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 2: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="open-info-modal" data-modal="modal-automation">Workflow Automation</a></li>
+                        <li><a href="#" class="open-info-modal" data-modal="modal-support">AI Customer Support</a></li>
+                        <li><a href="#" class="open-info-modal" data-modal="modal-sales">Sales & Lead Generation</a></li>
+                        <li><a href="#" class="open-info-modal" data-modal="modal-custom">Custom AI Infrastructure</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Legal & Resources -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Resources & Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="open-info-modal" data-modal="modal-security">Security & Data Privacy</a></li>
+                        <li><a href="#" class="open-info-modal" data-modal="modal-privacy">Privacy Policy</a></li>
+                        <li><a href="#" class="open-info-modal" data-modal="modal-terms">Terms of Service</a></li>
+                        <li><a href="#" class="open-info-modal" data-modal="modal-report">McKinsey AI Benchmark</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Connect & Aria -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Connect with Aria</h4>
+                    <div class="footer-aria-card">
+                        <div class="footer-aria-avatar-wrap">
+                            <img src="aria_hero_circular.png" alt="Aria" class="footer-aria-avatar">
+                            <span class="footer-aria-dot"></span>
+                        </div>
+                        <div class="footer-aria-info">
+                            <span class="f-aria-name">Aria</span>
+                            <span class="f-aria-role">AI Business Consultant</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary-glow footer-consult-btn btn-consultation">
+                        <span>Book Strategy Call</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Bottom Sub-Footer Bar -->
+            <div class="footer-bottom-bar">
+                <div class="footer-copy">
+                    © 2026 <strong>The Code Whiz AI Lab</strong>. All rights reserved.
+                </div>
+                <div class="footer-badge-tech">
+                    <span>Engineered with Precision & Human-AI Collaboration</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- INFO MODAL: Multi-Purpose Glass Reader for Sub-Pages          -->
+    <!-- ============================================================ -->
+    <div class="info-modal-overlay" id="info-modal">
+        <div class="info-modal-backdrop" id="info-modal-backdrop"></div>
+        <div class="info-modal-card">
+            <button class="info-modal-close" id="info-modal-close" aria-label="Close modal">✕</button>
+            <div class="info-modal-header">
+                <span class="info-modal-badge" id="info-modal-badge">DOCUMENTATION</span>
+                <h3 class="info-modal-title" id="info-modal-title">Privacy Policy</h3>
+            </div>
+            <div class="info-modal-body" id="info-modal-body">
+                <!-- Content injected dynamically via JS -->
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================ -->
+    <!-- BOOKING MODAL: Apple-Inspired Strategy Session Overlay      -->
+    <!-- ============================================================ -->
+    <div class="booking-modal-overlay" id="booking-modal">
+        <div class="booking-modal-backdrop" id="booking-modal-backdrop"></div>
+        
+        <div class="booking-modal-card">
+            <!-- Close Button -->
+            <button class="booking-modal-close" id="booking-modal-close" aria-label="Close modal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="booking-modal-header">
+                <div class="booking-aria-host">
+                    <div class="booking-aria-avatar-ring">
+                        <img src="aria_hero_circular.png" alt="Aria Guide" class="booking-aria-avatar">
+                        <span class="booking-aria-dot"></span>
+                    </div>
+                    <div class="booking-aria-text">
+                        <span class="aria-host-badge">ARIA • PERSONAL CONSULTANT</span>
+                        <h3 class="booking-modal-title">Book Strategy Session</h3>
+                    </div>
+                </div>
+
+                <!-- Progress Indicator Bar -->
+                <div class="booking-progress-bar">
+                    <div class="booking-progress-fill" id="booking-progress-fill" style="width: 16%;"></div>
+                </div>
+                <div class="booking-step-counter" id="booking-step-counter">Step 1 of 5</div>
+            </div>
+
+            <!-- Modal Body Step Panes -->
+            <div class="booking-modal-body">
+                
+                <!-- STEP 1: Your Name -->
+                <div class="booking-step-pane active" id="booking-step-1">
+                    <label class="booking-field-label">What is your name?</label>
+                    <div class="booking-input-wrap">
+                        <span class="input-icon">👤</span>
+                        <input type="text" class="booking-input-field" id="book-name" placeholder="Enter your full name" autocomplete="name">
+                    </div>
+                </div>
+
+                <!-- STEP 2: Business Name -->
+                <div class="booking-step-pane" id="booking-step-2">
+                    <label class="booking-field-label">What is your business name?</label>
+                    <div class="booking-input-wrap">
+                        <span class="input-icon">💼</span>
+                        <input type="text" class="booking-input-field" id="book-business" placeholder="Enter company or brand name">
+                    </div>
+                </div>
+
+                <!-- STEP 3: Email Address -->
+                <div class="booking-step-pane" id="booking-step-3">
+                    <label class="booking-field-label">Where should we send your AI strategy?</label>
+                    <div class="booking-input-wrap">
+                        <span class="input-icon">✉️</span>
+                        <input type="email" class="booking-input-field" id="book-email" placeholder="name@company.com" autocomplete="email">
+                    </div>
+                </div>
+
+                <!-- STEP 4: Business Size -->
+                <div class="booking-step-pane" id="booking-step-4">
+                    <label class="booking-field-label">What is your business team size?</label>
+                    <div class="booking-select-grid">
+                        <button class="booking-opt-card" data-val="1-5 Employees">
+                            <span class="opt-emoji">🌱</span>
+                            <span class="opt-text">1-5 Employees</span>
+                        </button>
+                        <button class="booking-opt-card" data-val="5-20 Employees">
+                            <span class="opt-emoji">⚡</span>
+                            <span class="opt-text">5-20 Employees</span>
+                        </button>
+                        <button class="booking-opt-card" data-val="20-50 Employees">
+                            <span class="opt-emoji">🚀</span>
+                            <span class="opt-text">20-50 Employees</span>
+                        </button>
+                        <button class="booking-opt-card" data-val="50-100+ Employees">
+                            <span class="opt-emoji">🏛️</span>
+                            <span class="opt-text">50-100+ Employees</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 5: Primary Challenge -->
+                <div class="booking-step-pane" id="booking-step-5">
+                    <label class="booking-field-label">What is your primary AI objective?</label>
+                    <div class="booking-select-grid">
+                        <button class="booking-opt-card" data-val="Workflow Automation">
+                            <span class="opt-emoji">⚙️</span>
+                            <span class="opt-text">Workflow Automation</span>
+                        </button>
+                        <button class="booking-opt-card" data-val="AI Customer Support">
+                            <span class="opt-emoji">💬</span>
+                            <span class="opt-text">AI Customer Support</span>
+                        </button>
+                        <button class="booking-opt-card" data-val="Sales & Lead Gen">
+                            <span class="opt-emoji">📈</span>
+                            <span class="opt-text">Sales & Lead Gen</span>
+                        </button>
+                        <button class="booking-opt-card" data-val="Custom AI Solutions">
+                            <span class="opt-emoji">🧠</span>
+                            <span class="opt-text">Custom AI Solutions</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SUMMARY STAGE: Confirmation Card -->
+                <div class="booking-step-pane" id="booking-step-summary">
+                    <div class="booking-summary-header">
+                        <span class="summary-confidential-tag">CONFIDENTIAL STRATEGY SESSION</span>
+                        <h4 class="summary-title">Review Your Reservation</h4>
+                    </div>
+
+                    <div class="booking-summary-card">
+                        <div class="sum-item">
+                            <span class="sum-label">Client Name</span>
+                            <span class="sum-val" id="sum-val-name">—</span>
+                        </div>
+                        <div class="sum-item">
+                            <span class="sum-label">Business</span>
+                            <span class="sum-val" id="sum-val-business">—</span>
+                        </div>
+                        <div class="sum-item">
+                            <span class="sum-label">Email Address</span>
+                            <span class="sum-val" id="sum-val-email">—</span>
+                        </div>
+                        <div class="sum-item">
+                            <span class="sum-label">Team Scale</span>
+                            <span class="sum-val" id="sum-val-scale">—</span>
+                        </div>
+                        <div class="sum-item">
+                            <span class="sum-label">AI Objective</span>
+                            <span class="sum-val" id="sum-val-challenge">—</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-summary-aria-note">
+                        <span class="note-sparkle">✨</span>
+                        <span>"Aria will present your tailored AI roadmap during this 1-on-1 session."</span>
+                    </div>
+                </div>
+
+                <!-- SUCCESS CELEBRATION STAGE -->
+                <div class="booking-step-pane" id="booking-step-success">
+                    <div class="booking-success-box">
+                        <div class="success-icon-wrap">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="success-title">Strategy Session Reserved!</h3>
+                        <p class="success-desc">We have dispatched your invitation link and strategy preview to <strong id="success-user-email">your email</strong>.</p>
+                        <div class="success-aria-quote">
+                            <span>"I look forward to transforming your business. See you soon!"</span>
+                            <span class="quote-author">— Aria</span>
+                        </div>
+                        <button class="btn btn-primary-glow" id="btn-close-success">Done</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer Controls -->
+            <div class="booking-modal-footer" id="booking-modal-footer">
+                <button class="btn btn-secondary-ghost" id="btn-booking-back" style="visibility: hidden;">Back</button>
+                <button class="btn btn-primary-glow" id="btn-booking-next">
+                    <span id="btn-next-text">Continue</span>
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-arrow">
+                        <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Action Badge -->
+    <a href="https://wa.me/923106182076" target="_blank" rel="noopener" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
+        <span class="wa-icon-glow">💬</span>
+        <span class="wa-text-label">WhatsApp // +92 310 6182076</span>
+    </a>
+
+    <script src="frontend/chat.js"></script>
+    <script src="frontend/voice.js"></script>
+    <script src="frontend/assistant.js"></script>
+    <script src="frontend/audit.js"></script>
+    <script src="frontend/trust.js"></script>
+    <script src="frontend/alive.js"></script>
+    <script src="frontend/cursor.js"></script>
+    <script src="frontend/neural_bg.js"></script>
+    <script src="frontend/scroll_reveal.js"></script>
+    <script src="frontend/buttons.js"></script>
+    <script src="frontend/navbar.js"></script>
+    <script src="frontend/booking.js"></script>
+    <script src="frontend/info_modal.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

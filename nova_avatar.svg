@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <!-- Lighting & Depth Gradients -->
+    <radialGradient id="holoBgGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#7C3AED" stop-opacity="0.15"/>
+      <stop offset="85%" stop-color="#0F0F10" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="ringGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0"/>
+      <stop offset="95%" stop-color="#C084FC" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FAFAFA" stop-opacity="0.9"/>
+    </radialGradient>
+
+    <!-- Hair 3D Shading -->
+    <linearGradient id="hairBaseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2E1065"/>
+      <stop offset="40%" stop-color="#1E1B4B"/>
+      <stop offset="85%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <linearGradient id="hairGlowStrand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D0FE"/>
+      <stop offset="30%" stop-color="#E9D5FF"/>
+      <stop offset="70%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <!-- Skin Subsurface Scattering -->
+    <radialGradient id="skinBaseGrad" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFF5F8"/>
+      <stop offset="55%" stop-color="#FCE7F3"/>
+      <stop offset="85%" stop-color="#F5D0FE"/>
+      <stop offset="100%" stop-color="#E9D5FF"/>
+    </radialGradient>
+
+    <!-- 3D Eye Depth & Iris -->
+    <radialGradient id="ariaEyeIris" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#F5D0FE"/>
+      <stop offset="25%" stop-color="#C084FC"/>
+      <stop offset="60%" stop-color="#7C3AED"/>
+      <stop offset="90%" stop-color="#4C1D95"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </radialGradient>
+
+    <!-- Designer Outfit Gradients -->
+    <linearGradient id="jacketWhiteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+
+    <linearGradient id="jacketBlackGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Glow & Refraction Filters -->
+    <filter id="hyperGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient Holographic Studio Glow -->
+  <circle cx="250" cy="270" r="230" fill="url(#holoBgGlow)"/>
+
+  <!-- Apple Vision Pro Holographic Interface Ring Background -->
+  <ellipse cx="250" cy="270" rx="220" ry="220" fill="none" stroke="url(#ringGrad)" stroke-width="2" opacity="0.6" filter="url(#hyperGlow)"/>
+  <ellipse cx="250" cy="270" rx="205" ry="205" fill="none" stroke="#C084FC" stroke-width="1" stroke-dasharray="8 12" opacity="0.4"/>
+
+  <!-- Aria 3D Hair - Back Layer -->
+  <path d="M 120 220 Q 90 400 105 560 L 395 560 Q 410 400 380 220 Z" fill="url(#hairBaseGrad)"/>
+  <!-- Glowing Hair Highlights Back -->
+  <path d="M 135 240 Q 110 420 125 560" stroke="url(#hairGlowStrand)" stroke-width="8" fill="none" opacity="0.75" filter="url(#softGlow)"/>
+  <path d="M 365 240 Q 390 420 375 560" stroke="url(#hairGlowStrand)" stroke-width="8" fill="none" opacity="0.75" filter="url(#softGlow)"/>
+
+  <!-- Neck & Delicate Collarbone -->
+  <path d="M 215 300 L 215 390 L 285 390 L 285 300 Z" fill="url(#skinBaseGrad)"/>
+  <path d="M 235 375 Q 250 382 265 375" stroke="#F43F5E" stroke-width="1" opacity="0.25" fill="none"/>
+  
+  <!-- Cyber Choker & ARIA Core Emblem -->
+  <rect x="210" y="355" width="80" height="18" rx="6" fill="#09090B" stroke="#C084FC" stroke-width="1.8" filter="url(#softGlow)"/>
+  <circle cx="250" cy="364" r="5" fill="#E9D5FF" filter="url(#hyperGlow)"/>
+
+  <!-- Shoulders & Luxury Tech Designer Outfit -->
+  <path d="M 100 490 Q 165 400 215 390 L 285 390 Q 335 400 400 490 L 425 600 L 75 600 Z" fill="url(#jacketBlackGrad)"/>
+  <!-- White Designer Outer Lapels -->
+  <path d="M 75 500 Q 150 415 205 400 L 190 600 L 65 600 Z" fill="url(#jacketWhiteGrad)"/>
+  <path d="M 425 500 Q 350 415 295 400 L 310 600 L 435 600 Z" fill="url(#jacketWhiteGrad)"/>
+  <!-- Glowing Violet Tech Seams -->
+  <path d="M 205 400 L 190 600" stroke="#C084FC" stroke-width="3" fill="none" filter="url(#hyperGlow)"/>
+  <path d="M 295 400 L 310 600" stroke="#C084FC" stroke-width="3" fill="none" filter="url(#hyperGlow)"/>
+
+  <!-- Aria 3D V-Line Face Base -->
+  <path d="M 155 170 Q 155 275 250 325 Q 345 275 345 170 Q 345 120 250 120 Q 155 120 155 170 Z" fill="url(#skinBaseGrad)"/>
+  
+  <!-- Soft Natural Cheek Blush -->
+  <ellipse cx="185" cy="250" rx="20" ry="10" fill="#F43F5E" opacity="0.32" filter="url(#softGlow)"/>
+  <ellipse cx="315" cy="250" rx="20" ry="10" fill="#F43F5E" opacity="0.32" filter="url(#softGlow)"/>
+
+  <!-- Nose Definition -->
+  <path d="M 247 258 L 250 263 L 253 258" stroke="#F43F5E" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Beautiful Glossy Lips -->
+  <g id="ariaLipsGroup">
+    <path d="M 228 285 Q 250 300 272 285" stroke="#E11D48" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 233 285 Q 250 295 267 285" fill="#F43F5E" opacity="0.85"/>
+    <ellipse cx="250" cy="290" rx="5" ry="2" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+
+  <!-- Left 3D Anime Eye -->
+  <g id="ariaLeftEyeGroup">
+    <!-- Eyelash Contour -->
+    <path d="M 172 216 Q 200 198 225 218" stroke="#09090B" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 218 208 L 225 218" stroke="#09090B" stroke-width="3.5"/>
+    <!-- Iris & Pupil -->
+    <ellipse cx="198" cy="232" rx="18" ry="27" fill="url(#ariaEyeIris)"/>
+    <ellipse cx="198" cy="235" rx="10" ry="16" fill="#1E1B4B"/>
+    <circle cx="198" cy="235" r="5" fill="#000000"/>
+    <!-- Catchlights / Sparkles -->
+    <circle cx="189" cy="222" r="6" fill="#FFFFFF"/>
+    <circle cx="207" cy="245" r="3.5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="192" cy="242" r="2" fill="#E9D5FF" opacity="0.8"/>
+    <!-- Eyebrow -->
+    <path d="M 170 196 Q 197 186 222 198" stroke="#334155" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right 3D Anime Eye -->
+  <g id="ariaRightEyeGroup">
+    <!-- Eyelash Contour -->
+    <path d="M 275 218 Q 300 198 328 216" stroke="#09090B" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 275 218 L 282 208" stroke="#09090B" stroke-width="3.5"/>
+    <!-- Iris & Pupil -->
+    <ellipse cx="302" cy="232" rx="18" ry="27" fill="url(#ariaEyeIris)"/>
+    <ellipse cx="302" cy="235" rx="10" ry="16" fill="#1E1B4B"/>
+    <circle cx="302" cy="235" r="5" fill="#000000"/>
+    <!-- Catchlights / Sparkles -->
+    <circle cx="293" cy="222" r="6" fill="#FFFFFF"/>
+    <circle cx="311" cy="245" r="3.5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="296" cy="242" r="2" fill="#E9D5FF" opacity="0.8"/>
+    <!-- Eyebrow -->
+    <path d="M 278 198 Q 303 186 330 196" stroke="#334155" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Aria Front Hair Bangs & Floating Wisps -->
+  <path d="M 145 160 Q 200 215 220 168 Q 250 225 280 168 Q 300 215 355 160 Q 345 85 250 85 Q 155 85 145 160 Z" fill="url(#hairBaseGrad)"/>
+  <path d="M 145 155 Q 130 260 150 350 Q 165 350 162 260 Q 158 170 162 155 Z" fill="url(#hairBaseGrad)"/>
+  <path d="M 355 155 Q 370 260 350 350 Q 335 350 338 260 Q 342 170 338 155 Z" fill="url(#hairBaseGrad)"/>
+  
+  <!-- Glowing Cyber Highlights in Hair Bangs -->
+  <path d="M 170 130 Q 195 190 208 158" stroke="url(#hairGlowStrand)" stroke-width="4.5" fill="none" opacity="0.9" filter="url(#softGlow)"/>
+  <path d="M 292 158 Q 305 190 330 130" stroke="url(#hairGlowStrand)" stroke-width="4.5" fill="none" opacity="0.9" filter="url(#softGlow)"/>
+
+  <!-- Futuristic Holographic Hair Pins -->
+  <rect x="132" y="142" width="22" height="8" rx="4" fill="#C084FC" transform="rotate(-18 132 142)" filter="url(#hyperGlow)"/>
+  <rect x="346" y="142" width="22" height="8" rx="4" fill="#C084FC" transform="rotate(18 346 142)" filter="url(#hyperGlow)"/>
+
+</svg>
