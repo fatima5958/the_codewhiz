@@ -1362,25 +1362,25 @@
 }
 
 /* ====================================================
-   APPLE-INSPIRED LUXURY CIRCULAR HERO SYSTEM
+   APPLE-INSPIRED LUXURY CIRCULAR HERO SYSTEM (VISUAL POLISH V1)
    ==================================================== */
 .hero-apple-minimal {
-    padding: 130px 0 90px;
-    min-height: 88vh;
+    padding: 140px 0 100px;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     position: relative;
-    background: radial-gradient(circle at 65% 45%, rgba(139, 92, 246, 0.12), transparent 55%), #050505;
+    background: radial-gradient(circle at 65% 45%, rgba(139, 92, 246, 0.1), transparent 55%), #050505;
 }
 
 .hero-apple__inner {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
-    max-width: 1240px;
+    max-width: 1260px;
     margin: 0 auto;
-    gap: 60px;
-    padding: 0 32px;
+    gap: 70px;
+    padding: 0 40px;
     width: 100%;
 }
 
@@ -1398,7 +1398,7 @@
     font-weight: 700;
     color: #C084FC;
     letter-spacing: 0.08em;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     backdrop-filter: blur(12px);
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.15);
 }
@@ -1415,20 +1415,20 @@
     font-family: var(--font-heading);
     font-size: clamp(3.4rem, 5.8vw, 5.0rem);
     font-weight: 800;
-    line-height: 1.04;
+    line-height: 1.05;
     color: #FAFAFA;
     letter-spacing: -0.035em;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     text-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
 }
 
 .hero-subtitle--apple {
-    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    font-size: clamp(1.08rem, 1.6vw, 1.3rem);
     line-height: 1.65;
     color: #A1A1AA;
     font-weight: 400;
-    max-width: 520px;
-    margin-bottom: 38px;
+    max-width: 540px;
+    margin-bottom: 40px;
 }
 
 .hero-cta-group {
@@ -1442,17 +1442,21 @@
 .btn-primary-glow {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 15px 30px;
+    min-height: 52px;
+    padding: 0 32px;
+    box-sizing: border-box;
     background: linear-gradient(135deg, #C084FC, #9333EA);
     color: #FFFFFF !important;
     font-family: var(--font-heading);
-    font-size: 0.94rem;
+    font-size: 0.92rem;
     font-weight: 700;
     border-radius: 9999px;
-    box-shadow: 0 0 35px rgba(192, 132, 252, 0.45), 0 10px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 35px rgba(192, 132, 252, 0.4), 0 10px 25px rgba(0, 0, 0, 0.5);
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
     text-decoration: none;
+    line-height: 1;
 }
 
 .btn-primary-glow:hover {
@@ -1465,18 +1469,22 @@
 .btn-secondary-ghost {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 15px 28px;
+    min-height: 52px;
+    padding: 0 28px;
+    box-sizing: border-box;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.16);
     color: #FAFAFA !important;
     font-family: var(--font-heading);
-    font-size: 0.94rem;
+    font-size: 0.92rem;
     font-weight: 600;
     border-radius: 9999px;
     backdrop-filter: blur(16px);
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
     cursor: pointer;
+    line-height: 1;
 }
 
 .btn-secondary-ghost:hover {
@@ -1486,22 +1494,11 @@
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
 }
 
-.play-icon-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background: rgba(192, 132, 252, 0.2);
-    border-radius: 50%;
-    color: #C084FC;
-}
-
 /* RIGHT SIDE — Apple Premium Circular Container */
 .hero-circular-stage {
     position: relative;
-    width: 460px;
-    height: 460px;
+    width: 440px;
+    height: 440px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1513,8 +1510,8 @@
     position: absolute;
     inset: -14px;
     border-radius: 50%;
-    border: 1px dashed rgba(192, 132, 252, 0.35);
-    animation: ring-rotate 25s linear infinite;
+    border: 1px dashed rgba(192, 132, 252, 0.22);
+    animation: ring-rotate 28s linear infinite;
     pointer-events: none;
 }
 
@@ -1525,49 +1522,51 @@
 
 .circular-ambient-glow {
     position: absolute;
-    inset: -35px;
+    inset: -45px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(192, 132, 252, 0.4) 0%, rgba(139, 92, 246, 0.12) 60%, transparent 75%);
-    filter: blur(40px);
-    animation: glow-pulse 5s ease-in-out infinite alternate;
+    background: radial-gradient(circle, rgba(192, 132, 252, 0.25) 0%, rgba(139, 92, 246, 0.08) 55%, transparent 75%);
+    filter: blur(55px);
+    opacity: 0.65;
+    animation: glow-pulse 6s ease-in-out infinite alternate;
     pointer-events: none;
 }
 
 @keyframes glow-pulse {
-    0% { opacity: 0.5; transform: scale(0.94); }
-    100% { opacity: 0.9; transform: scale(1.08); }
+    0% { opacity: 0.5; transform: scale(0.95); }
+    100% { opacity: 0.8; transform: scale(1.05); }
 }
 
 /* Orbiting Tiny Particles */
 .orbit-particle {
     position: absolute;
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     background: #E9D5FF;
     border-radius: 50%;
-    box-shadow: 0 0 12px #C084FC;
+    box-shadow: 0 0 10px #C084FC;
     pointer-events: none;
     z-index: 5;
+    opacity: 0.7;
 }
 
-.orbit-particle.p1 { top: 15px; right: 50px; animation: p-orbit 8s ease-in-out infinite alternate; }
-.orbit-particle.p2 { bottom: 35px; left: 30px; animation: p-orbit 11s ease-in-out infinite alternate 1s; }
-.orbit-particle.p3 { top: 50%; left: -20px; animation: p-orbit 9s ease-in-out infinite alternate 2s; }
+.orbit-particle.p1 { top: 20px; right: 55px; animation: p-orbit 8s ease-in-out infinite alternate; }
+.orbit-particle.p2 { bottom: 40px; left: 35px; animation: p-orbit 11s ease-in-out infinite alternate 1s; }
+.orbit-particle.p3 { top: 50%; left: -15px; animation: p-orbit 9s ease-in-out infinite alternate 2s; }
 
 @keyframes p-orbit {
-    0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-    100% { transform: translate(8px, -12px) scale(1.4); opacity: 1; }
+    0% { transform: translate(0, 0) scale(0.9); opacity: 0.4; }
+    100% { transform: translate(8px, -10px) scale(1.3); opacity: 0.85; }
 }
 
-/* Large Circular Glass Frame (420px) */
+/* Large Circular Glass Frame (390px) */
 .aria-circular-frame {
-    width: 420px;
-    height: 420px;
+    width: 390px;
+    height: 390px;
     border-radius: 50%;
     position: relative;
     padding: 6px;
-    background: linear-gradient(135deg, #C084FC, rgba(139, 92, 246, 0.45), #E9D5FF, rgba(139, 92, 246, 0.25));
-    box-shadow: 0 0 60px rgba(192, 132, 252, 0.45), 0 35px 90px rgba(0, 0, 0, 0.95);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(192, 132, 252, 0.35) 35%, rgba(255, 255, 255, 0.08) 70%, rgba(192, 132, 252, 0.2) 100%);
+    box-shadow: 0 0 45px rgba(192, 132, 252, 0.3), 0 35px 90px rgba(0, 0, 0, 0.95), inset 0 1.5px 2px rgba(255, 255, 255, 0.5), inset 0 -2px 8px rgba(139, 92, 246, 0.25);
     animation: circle-float 6s ease-in-out infinite alternate, circle-breath 7s ease-in-out infinite alternate;
     overflow: hidden;
     z-index: 10;
@@ -1575,21 +1574,21 @@
 
 @keyframes circle-float {
     0% { transform: translateY(0px); }
-    100% { transform: translateY(-10px); }
+    100% { transform: translateY(-8px); }
 }
 
 @keyframes circle-breath {
     0% { transform: scale(1.0); }
-    100% { transform: scale(1.02); }
+    100% { transform: scale(1.018); }
 }
 
 .circular-glass-backdrop {
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 35%, rgba(35, 28, 52, 0.85), rgba(12, 12, 16, 0.98));
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
+    background: radial-gradient(circle at 50% 30%, rgba(38, 30, 56, 0.88), rgba(10, 10, 14, 0.98));
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
     z-index: 1;
 }
 
@@ -1599,11 +1598,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 5%; /* Head fully uncropped with top breathing space */
+    object-position: 50% 5%;
     border-radius: 50%;
     transform: scale(1.0);
     transition: transform 0.4s ease;
-    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.9)) contrast(1.04) brightness(1.02);
 }
 
 /* Small AI Online Indicator Pill */
@@ -1633,14 +1632,19 @@
 
 /* Responsive Scaling for Mobile */
 @media (max-width: 991px) {
+    .hero-apple-minimal {
+        padding: 110px 0 70px;
+    }
+
     .hero-apple__inner {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 50px;
+        gap: 48px;
+        padding: 0 24px;
     }
 
     .hero-subtitle--apple {
-        margin: 0 auto 32px;
+        margin: 0 auto 36px;
     }
 
     .hero-cta-group {
@@ -1648,13 +1652,13 @@
     }
 
     .hero-circular-stage {
-        width: 290px;
-        height: 290px;
+        width: 310px;
+        height: 310px;
     }
 
     .aria-circular-frame {
-        width: 280px;
-        height: 280px;
+        width: 290px;
+        height: 290px;
     }
 }
 
