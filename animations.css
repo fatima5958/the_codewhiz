@@ -2392,7 +2392,10 @@ button:active,
     position: fixed;
     inset: 0;
     z-index: 100000;
-    display: none;
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -2401,7 +2404,10 @@ button:active,
 }
 
 .booking-modal-overlay.active {
-    display: flex;
+    display: flex !important;
+    height: 100% !important;
+    width: 100% !important;
+    overflow: visible !important;
     opacity: 1;
     pointer-events: auto;
 }
@@ -2792,7 +2798,8 @@ button:active,
     position: relative;
     background: #040406;
     border-top: 1px solid rgba(192, 132, 252, 0.25);
-    padding: 55px 0 24px;
+    padding: 55px 0 0;
+    margin: 0 !important;
     overflow: hidden;
     z-index: 10;
 }
@@ -3075,7 +3082,8 @@ button:active,
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 18px;
+    padding: 18px 0 24px;
+    margin: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     font-size: 0.84rem;
     color: #71717A;
@@ -3100,7 +3108,10 @@ button:active,
     position: fixed;
     inset: 0;
     z-index: 100000;
-    display: none;
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -3109,7 +3120,10 @@ button:active,
 }
 
 .info-modal-overlay.active {
-    display: flex;
+    display: flex !important;
+    height: 100% !important;
+    width: 100% !important;
+    overflow: visible !important;
     opacity: 1;
     pointer-events: auto;
 }
