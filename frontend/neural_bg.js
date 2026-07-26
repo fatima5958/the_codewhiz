@@ -13,11 +13,28 @@ class AriaNeuralBackground {
         this.maxDistance = 140;
 
         this.mouse = { x: -1000, y: -1000, targetX: -1000, targetY: -1000 };
+        this.isVisible = true;
+        this.rafId = null;
 
         this.resize();
         this.initParticles();
         this.bindEvents();
+        this.initIntersectionObserver();
         this.render();
+    }
+
+    initIntersectionObserver() {
+        if (!('IntersectionObserver' in window)) return;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                this.isVisible = entry.isIntersecting;
+                if (this.isVisible && !this.rafId) {
+                    this.render();
+                }
+            });
+        }, { threshold: 0.05 });
+
+        observer.observe(this.canvas);
     }
 
     resize() {
@@ -27,8 +44,9 @@ class AriaNeuralBackground {
     }
 
     bindEvents() {
-        window.addEventListener('resize', () => this.resize());
+        window.addEventListener('resize', () => this.resize(), { passive: true });
         window.addEventListener('mousemove', (e) => {
+            if (!this.isVisible) return;
             const rect = this.canvas.getBoundingClientRect();
             this.mouse.targetX = e.clientX - rect.left;
             this.mouse.targetY = e.clientY - rect.top;
@@ -110,7 +128,11 @@ class AriaNeuralBackground {
             }
         }
 
-        requestAnimationFrame(() => this.render());
+        if (this.isVisible) {
+            this.rafId = requestAnimationFrame(() => this.render());
+        } else {
+            this.rafId = null;
+        }
     }
 }
 

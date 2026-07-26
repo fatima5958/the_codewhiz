@@ -30,72 +30,64 @@ class AriaLifeEngine {
     }
 
     initAvatars() {
-        this.avatars = document.querySelectorAll('.aria-avatar-img, #aria-portrait, .hero-aria-portrait, .cta-aria-img, .audit-aria-avatar img');
-    }
-
-    /**
-     * Mouse Parallax: Aria gently turns her head and looks toward the user's cursor
-     */
-    bindMouseTracking() {
-        window.addEventListener('mousemove', (e) => {
-            if (!this.isTabActive) return;
-
-            const centerX = window.innerWidth / 2;
-            const centerY = window.innerHeight / 2;
-
-            const deltaX = (e.clientX - centerX) / centerX;
-            const deltaY = (e.clientY - centerY) / centerY;
-
-            // Natural 10px shift
-            this.targetPos.x = deltaX * 10;
-            this.targetPos.y = deltaY * 7;
-
-            // Interactive mouse lighting direction shift
-            const lightSweep = document.querySelector('.aria-light-sweep');
-            if (lightSweep) {
-                const lightX = deltaX * 24;
-                const lightY = deltaY * 18;
-                lightSweep.style.transform = `translate3d(${lightX}px, ${lightY}px, 0) rotate(${12 + deltaX * 8}deg)`;
+        const nodes = document.querySelectorAll('.aria-avatar-img, #aria-portrait, .hero-aria-portrait, .cta-aria-img, .audit-aria-avatar img');
+        this.avatars = Array.from(nodes).map(avatar => {
+            let baseScale = 1;
+            if (avatar.classList.contains('aria-circular-img') || avatar.classList.contains('hero-aria-portrait')) {
+                baseScale = 1.06;
+            } else if (avatar.classList.contains('nova-3d-anime-img')) {
+                baseScale = 1.4;
             }
+            return { el: avatar, baseScale, isVisible: true };
+        });
 
-            this.resetIdleTimer();
-        }, { passive: true });
+        if ('IntersectionObserver' in window) {
+            const avatarObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const found = this.avatars.find(a => a.el === entry.target);
+                    if (found) found.isVisible = entry.isIntersecting;
+                });
+                this.checkAnyVisible();
+            }, { threshold: 0.05 });
+
+            this.avatars.forEach(a => avatarObserver.observe(a.el));
+        }
     }
 
-    /**
-     * 60 FPS Combined Physics Loop: Mouse Parallax + Breathing + Head Tilt + Micro-Eye Shift
-     */
-    initBreathingLoop() {
-        const loop = (timestamp) => {
-            if (this.isTabActive) {
-                const elapsed = (timestamp - this.startTime) * 0.001; // Seconds
+    checkAnyVisible() {
+        const anyVisible = this.avatars.some(a => a.isVisible);
+        if (anyVisible && !this.rafId && this.isTabActive) {
+            this.startBreathingLoop();
+        }
+    }
 
-                // Organic breathing wave (chest rise, shoulder lift, subtle neck follow)
+    startBreathingLoop() {
+        if (this.rafId) return;
+        const loop = (timestamp) => {
+            if (this.isTabActive && this.avatars.some(a => a.isVisible)) {
+                const elapsed = (timestamp - this.startTime) * 0.001;
+
                 this.breathY = Math.sin(elapsed * 1.1) * 2.2 + Math.sin(elapsed * 2.2) * 0.6;
 
-                // Smooth position lerp
                 this.mousePos.x += (this.targetPos.x + this.eyeShift.x - this.mousePos.x) * 0.08;
                 this.mousePos.y += (this.targetPos.y + this.eyeShift.y + this.breathY - this.mousePos.y) * 0.08;
 
-                // Apply transforms
-                this.avatars.forEach(avatar => {
-                    if (avatar) {
-                        let baseScale = 1;
-                        if (avatar.classList.contains('aria-circular-img') || avatar.classList.contains('hero-aria-portrait')) {
-                            baseScale = 1.06;
-                        } else if (avatar.classList.contains('nova-3d-anime-img')) {
-                            baseScale = 1.4;
-                        }
-
-                        avatar.style.transform = `scale(${baseScale}) translate3d(${this.mousePos.x}px, ${this.mousePos.y}px, 0) rotate(${this.headTilt}deg)`;
+                for (let i = 0; i < this.avatars.length; i++) {
+                    const item = this.avatars[i];
+                    if (item.isVisible && item.el) {
+                        item.el.style.transform = `scale(${item.baseScale}) translate3d(${this.mousePos.x}px, ${this.mousePos.y}px, 0) rotate(${this.headTilt}deg)`;
                     }
-                });
+                }
+                this.rafId = requestAnimationFrame(loop);
+            } else {
+                this.rafId = null;
             }
-
-            this.rafId = requestAnimationFrame(loop);
         };
-
         this.rafId = requestAnimationFrame(loop);
+    }
+
+    initBreathingLoop() {
+        this.startBreathingLoop();
     }
 
     /**

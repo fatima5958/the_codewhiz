@@ -98,16 +98,22 @@ class AriaLuxuryCursor {
     }
 
     /**
-     * 60 FPS Ultra-Responsive Cursor Loop (Zero Lag)
+     * 60 FPS Ultra-Responsive Cursor Loop (Zero Lag + Idle Smart Pause)
      */
     render() {
-        // 1-to-1 instant center tracking (zero lag!)
+        if (document.visibilityState !== 'visible') {
+            this.rafId = requestAnimationFrame(() => this.render());
+            return;
+        }
+
         this.dotPos.x = this.mouse.x;
         this.dotPos.y = this.mouse.y;
 
-        // High-speed follower tracking (0.45 lerp factor for crisp responsiveness)
-        this.followerPos.x += (this.mouse.x - this.followerPos.x) * 0.45;
-        this.followerPos.y += (this.mouse.y - this.followerPos.y) * 0.45;
+        const dx = this.mouse.x - this.followerPos.x;
+        const dy = this.mouse.y - this.followerPos.y;
+
+        this.followerPos.x += dx * 0.45;
+        this.followerPos.y += dy * 0.45;
 
         if (this.dot) {
             this.dot.style.transform = `translate3d(${this.dotPos.x}px, ${this.dotPos.y}px, 0) translate(-50%, -50%)`;

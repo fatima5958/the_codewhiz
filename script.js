@@ -80,12 +80,22 @@ document.addEventListener('DOMContentLoaded', () => {
             mouseY = null;
         });
 
+        let isParticleCanvasVisible = true;
+        if ('IntersectionObserver' in window) {
+            const canvasObs = new IntersectionObserver((entries) => {
+                entries.forEach(e => { isParticleCanvasVisible = e.isIntersecting; });
+            }, { threshold: 0.01 });
+            canvasObs.observe(canvas);
+        }
+
         const animateParticles = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach((p) => {
-                p.update(mouseX, mouseY);
-                p.draw();
-            });
+            if (isParticleCanvasVisible && document.visibilityState === 'visible') {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach((p) => {
+                    p.update(mouseX, mouseY);
+                    p.draw();
+                });
+            }
             requestAnimationFrame(animateParticles);
         };
         animateParticles();
@@ -101,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (container && perspectiveWrapper) {
         let isHovered = false;
+        let isContainerVisible = true;
         let targetRotateX = 12;
         let targetRotateY = -16;
         let currentRotateX = 12;
@@ -108,62 +119,74 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let mousePos = { x: 0, y: 0 };
 
+        if ('IntersectionObserver' in window) {
+            const containerObs = new IntersectionObserver((entries) => {
+                entries.forEach(e => { isContainerVisible = e.isIntersecting; });
+            }, { threshold: 0.05 });
+            containerObs.observe(container);
+        }
+
+        // Precompute card depth once to avoid 60fps regex parsing overhead
+        const cardItems = Array.from(cards).map((card) => {
+            const styleAttr = card.getAttribute('style') || '';
+            const match = styleAttr.match(/--card-depth:\s*(-?\d+)px/);
+            const depth = match ? parseFloat(match[1]) : 0;
+            return { el: card, depth };
+        });
+
         container.addEventListener('mouseenter', () => {
             isHovered = true;
         });
 
         container.addEventListener('mouseleave', () => {
             isHovered = false;
-            // Reset to defaults
             targetRotateX = 12;
             targetRotateY = -16;
             mousePos = { x: 0, y: 0 };
         });
 
         container.addEventListener('mousemove', (e) => {
+            if (!isContainerVisible) return;
             const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left; // x position within element
-            const y = e.clientY - rect.top;  // y position within element
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
             
-            // Normalize coordinates from -1 to 1
             const normalizedX = (x / rect.width) * 2 - 1;
             const normalizedY = (y / rect.height) * 2 - 1;
             
             mousePos = { x: normalizedX, y: normalizedY };
 
-            // Rotate perspective wrapper based on mouse
-            targetRotateY = -16 + (normalizedX * 12); // -28deg to -4deg
-            targetRotateX = 12 - (normalizedY * 8);    // 4deg to 20deg
-        });
+            targetRotateY = -16 + (normalizedX * 12);
+            targetRotateX = 12 - (normalizedY * 8);
+        }, { passive: true });
 
         // Loop to smoothly interpolate transformations for 60fps feel
         const updateTransforms = () => {
-            currentRotateX += (targetRotateX - currentRotateX) * 0.1;
-            currentRotateY += (targetRotateY - currentRotateY) * 0.1;
+            if (isContainerVisible && document.visibilityState === 'visible') {
+                currentRotateX += (targetRotateX - currentRotateX) * 0.1;
+                currentRotateY += (targetRotateY - currentRotateY) * 0.1;
 
-            perspectiveWrapper.style.transform = `rotateY(${currentRotateY}deg) rotateX(${currentRotateX}deg) rotateZ(-1deg)`;
+                perspectiveWrapper.style.transform = `rotateY(${currentRotateY}deg) rotateX(${currentRotateX}deg) rotateZ(-1deg)`;
 
-            // Push individual cards forward/backward dynamically
-            cards.forEach((card) => {
-                const depth = parseFloat(card.getAttribute('style').match(/--card-depth:\s*(-?\d+)px/)[1]) || 0;
-                
-                // Calculate horizontal & vertical shift based on card depth and mouse position
-                let shiftX = 0;
-                let shiftY = 0;
+                // Push individual cards forward/backward dynamically
+                for (let i = 0; i < cardItems.length; i++) {
+                    const item = cardItems[i];
+                    let shiftX = 0;
+                    let shiftY = 0;
 
-                if (isHovered) {
-                    shiftX = mousePos.x * (depth * 0.25);
-                    shiftY = mousePos.y * (depth * 0.25);
+                    if (isHovered) {
+                        shiftX = mousePos.x * (item.depth * 0.25);
+                        shiftY = mousePos.y * (item.depth * 0.25);
+                    }
+
+                    item.el.style.transform = `translateZ(${item.depth}px) translateX(${shiftX}px) translateY(${shiftY}px)`;
                 }
 
-                card.style.transform = `translateZ(${depth}px) translateX(${shiftX}px) translateY(${shiftY}px)`;
-            });
-
-            // Gentle orb floating shift
-            if (ambientOrb) {
-                const orbShiftX = mousePos.x * 20;
-                const orbShiftY = mousePos.y * 20;
-                ambientOrb.style.transform = `translate(${orbShiftX}px, ${orbShiftY}px)`;
+                if (ambientOrb) {
+                    const orbShiftX = mousePos.x * 20;
+                    const orbShiftY = mousePos.y * 20;
+                    ambientOrb.style.transform = `translate3d(${orbShiftX}px, ${orbShiftY}px, 0)`;
+                }
             }
 
             requestAnimationFrame(updateTransforms);

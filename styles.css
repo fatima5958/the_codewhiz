@@ -4256,3 +4256,26 @@ img, video, canvas, svg {
         font-size: 0.7rem;
     }
 }
+
+/* ==========================================================================
+   LIGHTHOUSE PERFORMANCE ENGINE: Offscreen Content Bypass & Paint Optimization
+   ========================================================================== */
+.services-section,
+.build-section,
+.consultancy-section,
+.why-us-section,
+.signature-section,
+.ai-consultant-section,
+.projects-section,
+.threed-signature-section,
+.voice-consultant-section,
+.audit-section,
+.case-studies-section,
+.before-after-section,
+.roi-section,
+.testimonials-section,
+.contact-section,
+.final-cta-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
+}
